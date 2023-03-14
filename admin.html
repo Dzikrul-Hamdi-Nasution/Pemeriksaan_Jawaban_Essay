@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Icon -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- METISMENU SCRIPTS -->
+  <script src="assets/js/jquery.metisMenu.js"></script> 
+   <!-- MORRIS CHART SCRIPTS -->
+   <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+  <script src="assets/js/morris/morris.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+  <script src="assets/js/custom.js"></script>
+  <script src="html5-qrcode.min.js"></script>
+
+  
+    <title>ESSAY CBT | ADMIN</title>
+  </head>
+  <body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+     <div class="container">   
+    <a class="navbar-brand" href="#">Halaman Input Soal, Kunci Jawaban, dan Keyword</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+       
+        <li class="nav-item active">
+          <a class="nav-link js-scroll-trigger" href="daftar_nilai.html"><i  class="fa fa-dashboard fa-3x"></i>     Menu Utama<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <div class="col-md-6">
+    <div class="kotaka p-3 mb-5 rounded" style="float: left;">
+        <div class="kotak1 card" style="width: 18rem;">
+            <div class=" card-body">
+                <h5 class="card-title">Soal Baru </h5>  
+
+                <div class="form-group row">
+                  <div class="col-6 col-md-4">
+                      <input type="number" class="form-control" id="nomor_soal" value="1">
+                    </div>
+                  <div class="col-6 col-md-8">
+                    <input type="text" class="form-control" id="soal" placeholder="Isi Soal">
+                  </div>
+                </div>        
+                
+                <button onclick="okay_soal()" type="button" class="btn btn-success">Add</button>
+              </div>
+
+              <div class=" card-body">
+                <h5 class="card-title">Jawaban Baru </h5>
+                <input type="text" class="form-control" id="jawaban" placeholder="Isi Kunci Jawaban">
+                <button onclick="okay_jawaban()" type="button" class="btn btn-success">Add</button>
+              </div>
+
+            <!--   <div class=" card-body">
+                <h5 class="card-title">Key Word </h5>
+                <input type="text" class="form-control" id="key_word_1" placeholder="Isi Key Word 1">
+                <input type="text" class="form-control" id="key_word_2" placeholder="Isi Key Word 2">
+                <input type="text" class="form-control" id="key_word_3" placeholder="Isi Key Word 3">
+                <input type="text" class="form-control" id="key_word_4" placeholder="Isi Key Word 4">
+                <input type="text" class="form-control" id="key_word_5" placeholder="Isi Key Word 5">
+                <button onclick="okay_keyword()" type="button" class="btn btn-success">Add</button>
+              </div>-->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 mt-5">
+            <h3><i class="fas fa-shopping-cart mr-2"></i>DATA SOAL</h3>
+            <hr class="hr-menu">
+            <table id="tabel-status-alat" class="table table-bordered">
+            <thead>
+              <tr>
+          <th scope="col">nomor Soal</th>
+                <th scope="col">Soal </th>
+                <th scope="col">Kunci Jawaban </th>
+               <!--   <th scope="col">Key Word 1 </th>
+                <th scope="col">Key Word 2 </th>
+                <th scope="col">Key Word 3 </th>
+                <th scope="col">Key Word 4 </th>
+                <th scope="col">Key Word 5 </th>-->
+              </tr>
+            </thead>
+           
+              <tr>
+                  
+              </tr>
+        
+            </tbody>
+  
+                  <td></td> 
+          <td></td> 
+          <td></td> 
+                  
+          </table>
+          <button onclick="hapus()" type="button" class="btn btn-success">Hapus Database</button>
+         </div>
+      </div>
+      
+  </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="admin.js"></script>
+
+
+
+
+    
+ 
+  </body>
+</html>
